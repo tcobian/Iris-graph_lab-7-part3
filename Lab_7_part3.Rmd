@@ -15,4 +15,18 @@ library(plotly)
 View(iris)
 ```
 
-Grpah of 
+Scatter Grpah of petal length vs petal width.
+
+```{r}
+iris_graph<-ggplot(iris, aes(x = Petal.Width, y = Petal.Length))+
+  geom_point(aes(color = Species))+
+  facet_wrap(~ Species)+
+  scale_x_continuous(limits = c(0,3))+
+  scale_y_continuous(limits = c(0,7))+
+  labs(title = "Petal Length v.s. Petal Width")
+
+iris_graph
+  
+
+```
+
